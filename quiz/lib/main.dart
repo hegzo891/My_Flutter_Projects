@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz/Screens/results.dart';
 
 import 'Screens/questions.dart';
 import 'Screens/welcome.dart';
@@ -40,7 +41,7 @@ class _QuizState extends State<Quiz> {
     selectedAnswers.add(answer);
     if (selectedAnswers.length == questions.length) {
       setState(() {
-        current = Welcome(toggleScreen);
+        current = const Results();
         selectedAnswers = [];
       });
     }
